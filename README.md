@@ -1,4 +1,4 @@
-# matrix-link-bot
+# matrix-linkbot
 
 A Matrix bot that watches rooms for Instagram and YouTube links and re-posts them as inline videos. It uses [matrix-nio](https://github.com/matrix-nio/matrix-nio) and [yt-dlp](https://github.com/yt-dlp/yt-dlp), and runs natively under systemd without Docker.
 
@@ -9,7 +9,7 @@ A Matrix bot that watches rooms for Instagram and YouTube links and re-posts the
 
 | Feature | Details |
 |---|---|
-| Instagram | Posts, reels and TV links. Tracking params (`?igsh=` etc.) are stripped before download. |
+| Instagram | Posts, reels and TV links. Tracking params (`?igsh=` etc.) are stripped before download to protect the user who posted it from bot bans. |
 | YouTube | `watch`, `shorts`, `live`, `embed`, `youtu.be` and `music.` links. Resolution steps down from 1080p to 144p until the video fits `MAX_MB`. |
 | Long videos | Videos over `YT_MAX_MIN` get a prompt: ✅ send as a file, 🎵 send as audio (MP3, 192 kbps), ❌ cancel. Only the person who posted the link can answer, and the prompt expires after 10 minutes. |
 | iOS-safe video | VP9 and AV1 are transcoded to H.264 with `+faststart`, because Element X on iOS otherwise plays them as audio only. H.264 sources are remuxed without re-encoding. |
