@@ -127,6 +127,6 @@ If this bot is useful to you, consider supporting or contributing to them.
 
 ## License
 
-Licensed under the [Apache License, Version 2.0](LICENSE). See [NOTICE](NOTICE) for attribution.
+Licensed under the [GNU Affero General Public License v3.0](LICENSE). See [NOTICE](NOTICE) for attribution.
 
 The projects listed above are separate works under their own licenses and are not included in this repository.

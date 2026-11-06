@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# SPDX-License-Identifier: Apache-2.0
+# SPDX-License-Identifier: AGPL-3.0-only
 # Copyright 2026 Matt
 """matrix-link-bot: re-posts Instagram and YouTube videos as inline Matrix videos."""
 import asyncio, json, logging, os, re, shutil, subprocess, tempfile
