@@ -1,0 +1,13 @@
+# runtime state — never commit
+store/
+downloads/
+cookies.txt
+*.env
+!env.example
+
+# python
+venv/
+.venv/
+__pycache__/
+*.pyc
+*.bak*

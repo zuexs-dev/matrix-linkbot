@@ -1,0 +1,25 @@
+[Unit]
+Description=Matrix link bot (Instagram/YouTube -> inline video)
+After=network-online.target matrix-synapse.service
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=linkbot
+Group=linkbot
+EnvironmentFile=/etc/matrix-link-bot.env
+WorkingDirectory=/opt/matrix-link-bot
+ExecStart=/opt/matrix-link-bot/venv/bin/python /opt/matrix-link-bot/bot.py
+Restart=on-failure
+RestartSec=10
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/opt/matrix-link-bot
+ProtectKernelTunables=true
+ProtectControlGroups=true
+RestrictSUIDSGID=true
+
+[Install]
+WantedBy=multi-user.target
