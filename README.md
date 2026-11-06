@@ -2,6 +2,9 @@
 
 A Matrix bot that watches rooms for Instagram and YouTube links and re-posts them as inline videos. It uses [matrix-nio](https://github.com/matrix-nio/matrix-nio) and [yt-dlp](https://github.com/yt-dlp/yt-dlp), and runs natively under systemd without Docker.
 
+> [!WARNING]
+> This is basically 100% vibe coded using Claude and Qwen 3.8 27B. Installer beware.
+
 ## Features
 
 | Feature | Details |
