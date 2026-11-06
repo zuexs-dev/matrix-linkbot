@@ -104,6 +104,26 @@ sudo -u linkbot /opt/matrix-link-bot/venv/bin/pip install -U "yt-dlp[default]" &
 - Pending long-video prompts are held in memory and lost on restart.
 - Paths are hardcoded to `/opt/matrix-link-bot` (`BASE` in `bot.py`).
 
+## Built on open source
+
+This bot is a thin layer of glue. The heavy lifting is done by these projects, and they deserve the credit:
+
+| Project | What it does here | License |
+|---|---|---|
+| [matrix-nio](https://github.com/matrix-nio/matrix-nio) | Matrix client: login, sync, uploads, reactions | ISC |
+| [yt-dlp](https://github.com/yt-dlp/yt-dlp) | Extracts and downloads video from Instagram and YouTube | Unlicense |
+| [FFmpeg](https://ffmpeg.org) | Probing, transcoding to H.264, thumbnails, MP3 extraction | LGPL-2.1+ / GPL-2.0+ |
+| [x264](https://www.videolan.org/developers/x264.html) | The H.264 encoder behind the iOS-safe transcode | GPL-2.0+ |
+| [Deno](https://deno.com) | Lets yt-dlp solve YouTube's JS challenges | MIT |
+| [Python](https://www.python.org) | Language and asyncio runtime | PSF-2.0 |
+| [aiohttp](https://github.com/aio-libs/aiohttp) | Async HTTP underneath matrix-nio | Apache-2.0 |
+| [Synapse](https://github.com/element-hq/synapse) | The Matrix homeserver this runs against | AGPL-3.0 |
+| [Matrix](https://matrix.org) | The open, decentralized protocol that makes all of it possible | Apache-2.0 (spec) |
+
+If this bot is useful to you, consider supporting or contributing to them.
+
 ## License
 
-[MIT](LICENSE)
+Licensed under the [Apache License, Version 2.0](LICENSE). See [NOTICE](NOTICE) for attribution.
+
+The projects listed above are separate works under their own licenses and are not included in this repository.
