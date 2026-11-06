@@ -36,7 +36,7 @@ sudo useradd --system --home /opt/matrix-link-bot --shell /usr/sbin/nologin link
 ```
 
 ```bash
-sudo git clone https://github.com/<you>/matrix-link-bot /opt/matrix-link-bot && sudo chown -R linkbot: /opt/matrix-link-bot
+sudo git clone https://github.com/zuexs-dev/matrix-linkbot /opt/matrix-link-bot && sudo chown -R linkbot: /opt/matrix-link-bot
 ```
 
 ```bash
